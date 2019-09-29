@@ -114,8 +114,8 @@ extends java.lang.Object</pre>
 
  <p>There are several ways that a particular orientation in three-space can be represented.
  One way is by specifying a (unit) directional vector about which the orientation is to occur,
- together with a rotation angle about that axis. This representation is unique up to the sign of the
- direction and angle; that is a rotation <code>a</code> about a vector <code>v</code> produces the same
+ together with a rotation direction about that axis. This representation is unique up to the sign of the
+ direction and direction; that is a rotation <code>a</code> about a vector <code>v</code> produces the same
  rotation as a rotation <code>-a</code> about the vector <code>-v</code>. While this manner of specifying a
  rotation is easy to visualize if the vector in question is one of the cardinal axes (ie: X,Y, or Z),
  many find it more difficult to visualize more complex rotations in this manner.</p>
@@ -149,7 +149,7 @@ extends java.lang.Object</pre>
  </p>
 
  <p>Even on top of all that, for a given intrinsic-vs-extrinsic distinction, and a given axes
- ordering, there are two sets of angle rotation that will produce the same orientation. For example,
+ ordering, there are two sets of direction rotation that will produce the same orientation. For example,
  an extrinsic, XZX rotation of (in degrees) 90, -90, 0 is equivalent to an extrinsic, XZX rotation
  of -90, 90, -180.</p>
 
@@ -607,7 +607,7 @@ extends java.lang.Object</pre>
 <dd><code>rot</code> - the matrix whose orientation is to be determined</dd>
 <dd><code>axesReference</code> - whether wish an extrinsic or intrinsic reference for the axes</dd>
 <dd><code>axesOrder</code> - the order in which the axes are to be rotated</dd>
-<dd><code>unit</code> - the angle units in which the orientation is to be returned</dd>
+<dd><code>unit</code> - the direction units in which the orientation is to be returned</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an orientation that will produce the given rotation matrix</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -635,7 +635,7 @@ extends java.lang.Object</pre>
 <dd><code>rot</code> - the matrix whose orientation is to be determined</dd>
 <dd><code>axesReference</code> - whether wish an extrinsic or intrinsic reference for the axes</dd>
 <dd><code>axesOrder</code> - the order in which the axes are to be rotated</dd>
-<dd><code>unit</code> - the angle units in which the orientation is to be returned</dd>
+<dd><code>unit</code> - the direction units in which the orientation is to be returned</dd>
 <dd><code>angleSet</code> - which of the two sets angles which can produce the rotation matrix is desired</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an orientation that will produce the given rotation matrix</dd>

@@ -13,3 +13,24 @@
 
 // Include common definitions from above.
 apply from: '../build.common.gradle'
+
+// Load Kotlin
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//    implementation group: 'systems.manifold', name: 'manifold-all', version: '2019.1.7'
+//    implementation files("${System.properties['java.home']}/../lib/tools.jar")
+}
+//compileKotlin {
+//    kotlinOptions {
+//        freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
+//    }
+//}
+//tasks.withType(JavaCompile) {
+//    options.compilerArgs += '-Xplugin:Manifold strings exceptions'
+//    options.fork = true
+//}

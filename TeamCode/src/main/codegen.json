@@ -1,0 +1,48 @@
+{
+  "units_package": "org.firstinspires.ftc.teamcode.math",
+  "geometry_package": "org.firstinspires.ftc.teamcode.math.geometry",
+  "units": {
+    "Angle": {
+      "units": {
+        "RADIAN": 1.0,
+        "REVOLUTION": "RADIAN * TAU",
+        "DEGREE": "REVOLUTION / 360.0",
+        "ARC_MINUTE": "DEGREE / 60.0",
+        "ARC_SECOND": "ARC_MINUTE / 60.0"
+      },
+      "extra": [
+        "val normalized get() = Angle(mod(_value, REVOLUTION._value))"
+      ]
+    },
+    "AngularVelocity": {
+      "components": {
+        "Angle": 1,
+        "Duration": -1
+      }
+    },
+    "Area": {
+      "components": {
+        "Length": 2
+      }
+    },
+    "AreaPerSolidAngle": {
+      "components": {
+        "Angle": -2,
+        "Length": 2
+      }
+    },
+    "Duration": {
+      "units": {
+        "SECOND": 1.0,
+        "MINUTE": "SECOND * 60.0",
+        "HOUR": "MINUTE * 60.0",
+        "DAY": "HOUR * 24.0"
+      }
+    },
+    "Length": {
+      "units": {
+        
+      }
+    }
+  }
+}

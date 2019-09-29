@@ -162,8 +162,8 @@ extends <a href="../../../../com/qualcomm/robotcore/hardware/HardwareDevice.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/qualcomm/robotcore/hardware/IrSeekerSensor.html#getAngle--">getAngle</a></span>()</code>
-<div class="block">Estimated angle in which the signal is coming from</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/qualcomm/robotcore/hardware/IrSeekerSensor.html#getDirection--">getDirection</a></span>()</code>
+<div class="block">Estimated direction in which the signal is coming from</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -312,23 +312,23 @@ extends <a href="../../../../com/qualcomm/robotcore/hardware/HardwareDevice.html
 </dl>
 </li>
 </ul>
-<a name="getAngle--">
+<a name="getDirection--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getAngle</h4>
-<pre>double&nbsp;getAngle()</pre>
-<div class="block">Estimated angle in which the signal is coming from
+<h4>getDirection</h4>
+<pre>double&nbsp;getDirection()</pre>
+<div class="block">Estimated direction in which the signal is coming from
  <p>
  If the signal is estimated to be directly ahead, 0 will be returned. If the signal is to the
- left a negative angle will be returned. If the signal is to the right a positive angle will be
+ left a negative direction will be returned. If the signal is to the right a positive direction will be
  returned. If no signal is detected, a 0 will be returned.
  <p>
- NOTE: not all sensors give an accurate angle.</div>
+ NOTE: not all sensors give an accurate direction.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>angle to IR signal</dd>
+<dd>direction to IR signal</dd>
 </dl>
 </li>
 </ul>
@@ -356,7 +356,7 @@ extends <a href="../../../../com/qualcomm/robotcore/hardware/HardwareDevice.html
 <li class="blockList">
 <h4>getIndividualSensors</h4>
 <pre><a href="../../../../com/qualcomm/robotcore/hardware/IrSeekerSensor.IrSeekerIndividualSensor.html" title="class in com.qualcomm.robotcore.hardware">IrSeekerSensor.IrSeekerIndividualSensor</a>[]&nbsp;getIndividualSensors()</pre>
-<div class="block">Get a list of all IR sensors attached to this seeker. The list will include the angle at which
+<div class="block">Get a list of all IR sensors attached to this seeker. The list will include the direction at which
  the sensor is mounted, and the signal strength.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
