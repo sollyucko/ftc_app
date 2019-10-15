@@ -18,10 +18,11 @@ class TankDrivetrainBySpeed public constructor(public val distancePerAngle: Leng
 
     private val all = MotorWithWheelBySpeedGroup(left, right)
 
-    override fun setSpeed(fwd: Velocity, rot: AngularVelocity) {
+    public override fun setSpeed(fwd: Velocity, rot: AngularVelocity) {
         left.setSpeed(fwd - rot * distancePerAngle)
         right.setSpeed(fwd + rot * distancePerAngle)
     }
 
-    override val maxSpeed: Velocity by lazy { minOf(left.maxSpeed, right.maxSpeed) }
+    public override val maxFwd: Velocity = minOf(left.maxSpeed, right.maxSpeed)
+    public override val maxRot: AngularVelocity = maxFwd / distancePerAngle
 }

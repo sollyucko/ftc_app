@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: :WirelessP2p-release:@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/WirelessP2p-release.aar/7a58c8d7035ac98e3d609e496d11a127/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/WirelessP2p-release.aar/7a58c8d7035ac98e3d609e496d11a127/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd0d0ad74afa3c4de6dc66ed3726a36f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd0d0ad74afa3c4de6dc66ed3726a36f/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

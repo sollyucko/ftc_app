@@ -1,7 +1,15 @@
 {
   "units_package": "org.firstinspires.ftc.teamcode.math",
   "geometry_package": "org.firstinspires.ftc.teamcode.math.geometry",
-  "units": {
+  "prefixes": {
+    "KILO": 1000.0,
+    "HECTO": 100.0,
+    "DECA": 10.0,
+    "DECI": 0.1,
+    "CENTI": 0.01,
+    "MILLI": 0.001
+  },
+  "classes": {
     "Angle": {
       "units": {
         "RADIAN": 1.0,
@@ -10,9 +18,7 @@
         "ARC_MINUTE": "DEGREE / 60.0",
         "ARC_SECOND": "ARC_MINUTE / 60.0"
       },
-      "extra": [
-        "val normalized get() = Angle(mod(_value, REVOLUTION._value))"
-      ]
+      "extra": "val normalized get() = Angle(mod(_value, REVOLUTION._value))"
     },
     "AngularVelocity": {
       "components": {
@@ -23,6 +29,13 @@
     "Area": {
       "components": {
         "Length": 2
+      }
+    },
+    "AreaPerAnglePerDuration": {
+      "components": {
+        "Length": 2,
+        "Angle": -1,
+        "Duration": -1
       }
     },
     "AreaPerSolidAngle": {
@@ -41,8 +54,79 @@
     },
     "Length": {
       "units": {
-        
+        "INCH": 1.0,
+        "FOOT": "INCH * 12.0",
+        "YARD": "FOOT * 3.0",
+        "MILE": "YARD * 1760.0",
+        "METER": "INCH * 39.37"
+      }
+    },
+    "LengthPerAngle": {
+      "components": {
+        "Angle": -1,
+        "Length": 1
+      },
+      "companion_extra": "fun fromCircumference(circumference: Length) = circumference / REVOLUTION; fun fromRadius(radius: Length) = radius / RADIAN; fun fromDiameter(diameter: Length) = fromRadius(diameter / 2.0)"
+    },
+    "LengthPerTickCount": {
+      "components": {
+        "Length": 1,
+        "TickCount": -1
+      }
+    },
+    "TickCount": {
+      "units": {
+        "TICK": 1.0
+      }
+    },
+    "TickCountPerAngle": {
+      "components": {
+        "Angle": -1,
+        "TickCount": 1
+      }
+    },
+    "TickRate": {
+      "components": {
+        "Duration": -1,
+        "TickCount": 1
+      }
+    },
+    "Velocity": {
+      "components": {
+        "Duration": -1,
+        "Length": 1
+      }
+    },
+    "VelocityTimesVelocity": {
+        "components": {
+            "Duration": -2,
+            "Length": 2
+        }
+    },
+    "VelocityTimesAngularVelocity": {
+        "components": {
+            "Angle": 1,
+            "Duration": -2,
+            "Length": 1
+        }
+    },
+    "VelocityTimesVelocityTimesAngularVelocity": {
+        "components": {
+            "Angle": 1,
+            "Duration": -3,
+            "Length": 2
+        }
+    },
+    "Volume": {
+      "components": {
+        "Length": 3
       }
     }
-  }
+  },
+  "triplets":  [
+    ["LengthPerAngle", "LengthPerAngle", "Double"],
+    ["LengthPerAngle", "LengthPerAngle", "AreaPerSolidAngle"],
+    ["Velocity", "Velocity", "AngularVelocity"],
+    ["VelocityTimesAngularVelocity", "VelocityTimesAngularVelocity", "VelocityTimesVelocity"]
+  ]
 }

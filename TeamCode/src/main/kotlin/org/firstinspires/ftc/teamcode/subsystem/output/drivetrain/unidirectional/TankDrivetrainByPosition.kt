@@ -2,10 +2,8 @@ package org.firstinspires.ftc.teamcode.subsystem.output.drivetrain.unidirectiona
 
 import com.qualcomm.robotcore.hardware.DcMotorSimple
 import com.qualcomm.robotcore.hardware.HardwareMap
-import org.firstinspires.ftc.teamcode.math.Angle
+import org.firstinspires.ftc.teamcode.math.*
 import org.firstinspires.ftc.teamcode.math.Angle.Companion.RADIAN
-import org.firstinspires.ftc.teamcode.math.Length
-import org.firstinspires.ftc.teamcode.math.LengthPerAngle
 import org.firstinspires.ftc.teamcode.subsystem.output.drivetrain.MotorWithWheelByPosition
 import org.firstinspires.ftc.teamcode.subsystem.output.drivetrain.MotorWithWheelByPositionGroup
 import org.firstinspires.ftc.teamcode.subsystem.output.drivetrain.MotorWithWheelByPositionImpl

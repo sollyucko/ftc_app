@@ -1,8 +1,6 @@
 package org.firstinspires.ftc.teamcode.subsystem.output.drivetrain
 
-import org.firstinspires.ftc.teamcode.math.Velocity
-import org.firstinspires.ftc.teamcode.math.units.div
-import org.firstinspires.ftc.teamcode.math.units.times
+import org.firstinspires.ftc.teamcode.math.*
 
 class MotorWithWheelBySpeedGroup public constructor(private vararg val motors: MotorWithWheelBySpeed) : MotorWithWheelBySpeed {
     override fun setSpeed(speed: Velocity) {

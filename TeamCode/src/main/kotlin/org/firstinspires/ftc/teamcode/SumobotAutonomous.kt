@@ -9,7 +9,7 @@ import org.firstinspires.ftc.teamcode.math.Length.Companion.METER
 import org.firstinspires.ftc.teamcode.math.Prefix.CENTI
 import org.firstinspires.ftc.teamcode.math.Prefix.MILLI
 import org.firstinspires.ftc.teamcode.math.Velocity
-import org.firstinspires.ftc.teamcode.math.units.times
+import org.firstinspires.ftc.teamcode.math.times
 import org.firstinspires.ftc.teamcode.subsystem.output.drivetrain.unidirectional.TankDrivetrainByPosition
 
 @Autonomous(name = "SumobotAutonomous")

@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: :RobotServer-release:@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/RobotServer-release.aar/3568709cda197a4bc87680603873e113/jars/libs/Java-WebSocket-1.4.1-20190423.174615-6.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/RobotServer-release.aar/3568709cda197a4bc87680603873e113/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/RobotServer-release.aar/3568709cda197a4bc87680603873e113/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f3a5ccc8db283af9fa06db03e2cdb59/jars/libs/Java-WebSocket-1.4.1-20190423.174615-6.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f3a5ccc8db283af9fa06db03e2cdb59/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f3a5ccc8db283af9fa06db03e2cdb59/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

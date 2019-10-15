@@ -32,27 +32,6 @@ fun merge(vararg values: Double): Double {
     return first ?: Double.NaN
 }
 
-fun merge(a: Angle, b: Angle) = when {
-    a.isInfinite() || b.isInfinite() -> Angle.POSITIVE_INFINITY
-    a.isNaN() -> b
-    b.isNaN() || a == b -> a
-    else -> Angle.POSITIVE_INFINITY
-}
-
-fun merge(a: Length, b: Length) = when {
-    a.isInfinite() || b.isInfinite() -> Length.POSITIVE_INFINITY
-    a.isNaN() -> b
-    b.isNaN() || a == b -> a
-    else -> Length.POSITIVE_INFINITY
-}
-
-fun merge(a: AngularVelocity, b: AngularVelocity) = when {
-    a.isInfinite() || b.isInfinite() -> AngularVelocity.POSITIVE_INFINITY
-    a.isNaN() -> b
-    b.isNaN() || a == b -> a
-    else -> AngularVelocity.POSITIVE_INFINITY
-}
-
 class LazyAssignable<T : Any>(val f: () -> T) {
     private var _value: T? = null
 

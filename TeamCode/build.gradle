@@ -22,15 +22,17 @@ repositories {
 }
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-//    implementation group: 'systems.manifold', name: 'manifold-all', version: '2019.1.7'
-//    implementation files("${System.properties['java.home']}/../lib/tools.jar")
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.googlecode.matrix-toolkits-java:mtj:1.0.2'
+    implementation 'com.datumbox:lpsolve:5.5.2.0'
 }
-//compileKotlin {
-//    kotlinOptions {
-//        freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
-//    }
-//}
-//tasks.withType(JavaCompile) {
-//    options.compilerArgs += '-Xplugin:Manifold strings exceptions'
-//    options.fork = true
-//}
+
+android {
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src/main/kotlin', 'gen/main/kotlin']
+            }
+        }
+    }
+}

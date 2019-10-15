@@ -3,9 +3,7 @@ package org.firstinspires.ftc.teamcode.subsystem.output.drivetrain
 import com.qualcomm.robotcore.hardware.DcMotor
 import com.qualcomm.robotcore.hardware.DcMotorSimple
 import com.qualcomm.robotcore.hardware.HardwareMap
-import org.firstinspires.ftc.teamcode.math.Length
-import org.firstinspires.ftc.teamcode.math.LengthPerAngle
-import org.firstinspires.ftc.teamcode.math.LengthPerTickCount
+import org.firstinspires.ftc.teamcode.math.*
 
 class MotorWithWheelByPositionImpl private constructor(private val motor: Motor, private var distancePerTickCount: LengthPerTickCount, direction: DcMotorSimple.Direction, power: Double) : MotorWithWheelByPosition {
     private constructor(motor: Motor, distancePerAngle: LengthPerAngle, direction: DcMotorSimple.Direction)
