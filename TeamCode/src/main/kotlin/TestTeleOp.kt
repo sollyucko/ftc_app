@@ -3,7 +3,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp
 import com.qualcomm.robotcore.hardware.*
 import kotlin.math.sqrt
 import org.firstinspires.ftc.teamcode.math.*
-import org.firstinspires.ftc.teamcode.math.Length.Companion.METER
+//import org.firstinspires.ftc.teamcode.math.Length.Companion.*
+import org.firstinspires.ftc.teamcode.math.Length.Companion.INCH
 import org.firstinspires.ftc.teamcode.math.Prefix.CENTI
 import org.firstinspires.ftc.teamcode.math.geometry.*
 import org.firstinspires.ftc.teamcode.subsystem.output.drivetrain.*
@@ -15,10 +16,10 @@ class TestTeleOp : OpMode() {
 
     override fun init() {
         drivetrain = generalDrivetrainBySpeed(mapOf(
-            Pair(MotorImpl(hardwareMap, "left_front"), setOf(WheelWithPosition(DoubleVector2D(sqrt(2.0)/2.0, sqrt(2.0)/2.0) * (TODO() as Length), DoubleVector2D(-1.0, 1.0) * LengthPerAngle.fromDiameter(TODO() as Length)))),
-            Pair(MotorImpl(hardwareMap, "right_front"), setOf(WheelWithPosition(DoubleVector2D(sqrt(2.0)/2.0, sqrt(2.0)/2.0) * (TODO() as Length), DoubleVector2D(1.0, 1.0) * LengthPerAngle.fromDiameter(TODO() as Length)))),
-            Pair(MotorImpl(hardwareMap, "left_back"), setOf(WheelWithPosition(DoubleVector2D(sqrt(2.0)/2.0, sqrt(2.0)/2.0) * (TODO() as Length), DoubleVector2D(1.0, -1.0) * LengthPerAngle.fromDiameter(TODO() as Length)))),
-            Pair(MotorImpl(hardwareMap, "right_back"), setOf(WheelWithPosition(DoubleVector2D(sqrt(2.0)/2.0, sqrt(2.0)/2.0) * (TODO() as Length), DoubleVector2D(-1.0, -1.0) * LengthPerAngle.fromDiameter(TODO() as Length))))
+            Pair(MotorImpl(hardwareMap, "left_front"), setOf(WheelWithPosition(LengthVector2D(-7.0 * INCH, 5.5 * INCH), DoubleVector2D(sqrt(2.0)/2.0, sqrt(2.0)/2.0) * LengthPerAngle.fromDiameter(4.0 * INCH)))),
+            Pair(MotorImpl(hardwareMap, "right_front"), setOf(WheelWithPosition(LengthVector2D(7.0 * INCH, 5.5 * INCH), DoubleVector2D(sqrt(2.0)/2.0, sqrt(2.0)/2.0) * LengthPerAngle.fromDiameter(4.0 * INCH)))),
+            Pair(MotorImpl(hardwareMap, "left_back"), setOf(WheelWithPosition(LengthVector2D(7.0 * INCH, -5.5 * INCH), DoubleVector2D(sqrt(2.0)/2.0, sqrt(2.0)/2.0) * LengthPerAngle.fromDiameter(4.0 * INCH)))),
+            Pair(MotorImpl(hardwareMap, "right_back"), setOf(WheelWithPosition(LengthVector2D(-7.0 * INCH, -5.5 * INCH), DoubleVector2D(sqrt(2.0)/2.0, sqrt(2.0)/2.0) * LengthPerAngle.fromDiameter(4.0 * INCH))))
         ))
         drivetrain.setSpeed(Velocity.ZERO, Velocity.ZERO, AngularVelocity.ZERO)
         /*
@@ -44,3 +45,4 @@ class TestTeleOp : OpMode() {
                                gamepad1.left_stick_x.toDouble())
     }
 }
+
