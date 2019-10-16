@@ -39,10 +39,13 @@ class TestTeleOp : OpMode() {
         */
     }
 
-    override fun loop() {
+    override fun loop() { 
+        /*
         drivetrain.setRelSpeed(gamepad1.right_stick_x.toDouble(),
                                -gamepad1.right_stick_y.toDouble(),
                                gamepad1.left_stick_x.toDouble())
+        */
+        drivetrain.setRelSpeed(1.0, 1.0, 1.0)
     }
 }
 
